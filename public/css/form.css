@@ -1,0 +1,40 @@
+.content {
+    padding: 5% 13%;
+    background-color: black;
+    color: white;
+}
+
+.c_form-label {
+    width: 170px;
+    border: none;
+    color: white;
+    background-color: rgb(26, 26, 26);
+}
+
+.c_form-input {
+    border: none;
+    background-color: rgb(26, 26, 26);
+}
+
+.c_btn {
+    margin: 15px 0px;
+    border: none;
+    background-color: red;
+}
+
+.c_btn:hover {
+    background-color: rgb(170, 0, 0);
+}
+
+h6 {
+    text-align: center;
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+}
+
+.red-text {
+    color: red;
+}

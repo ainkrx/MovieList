@@ -1,0 +1,71 @@
+.content {
+  padding: 5% 13%;
+  background-color: black;
+  color: white;
+}
+
+.c_col {
+  width: 30vh;
+  margin-right: 5px;
+}
+
+.card-header {
+  padding: 0px 7px 0px 0px;
+}
+
+.card-header .fw-light {
+  margin: 0px;
+}
+
+.btn_img {
+  border-radius: 50px;
+  margin-left: 5px;
+}
+
+.c_col .card-img-top {
+  height: 350px;
+}
+
+.img_dark:hover {
+  filter: brightness(30%);
+}
+
+.box {
+  margin: 20px 0px;
+}
+
+.fw-bold {
+  margin-bottom: 5px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.row {
+  margin: 5px 0px;
+  margin-left: -15px;
+}
+
+.card {
+  background-color: rgb(26, 26, 26);
+  margin-right: 20px;
+}
+
+.card-body {
+  height: 100px;
+}
+
+.card img {
+  padding: 10px;
+  height: 20vw;
+}
+
+.card a {
+    padding-top: 10px;
+}
+
+.row a {
+  color: white;
+  text-decoration: none;
+}

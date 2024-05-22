@@ -1,0 +1,43 @@
+.card {
+  text-align: center;
+  background-color: black;
+}
+
+.c_col {
+  width: 30vh;
+  margin-right: 5px;
+}
+
+.card-img-top {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.card p {
+  margin: 15px 0px 0px 0px;
+}
+
+.input-group {
+  margin: 10px 0px;
+}
+
+.profile {
+  cursor: pointer;
+}
+
+.modal-content, .modal-header, .modal-body, .modal-footer {
+  background-color: rgb(26, 26, 26);
+  border: none;
+}
+
+.modal form {
+  padding: 10px;
+}
+
+.modal-body input {
+  background-color: black;
+}
+
+.modal-body p {
+  margin: 15px 0px 0px 5px;
+}

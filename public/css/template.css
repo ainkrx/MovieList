@@ -1,0 +1,93 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+  /* mo taro font ga? montserrat cakeup ueue */
+}
+
+nav {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4vw;
+}
+
+#logo-navbar {
+    width: 100px;
+}
+
+.menu {
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.menu a, button > a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: red;
+}
+
+/* .content {
+    padding: 5% 13%;
+    background-color: black;
+    color: white;
+} */
+
+.content h1 {
+    text-align: center;
+}
+
+#logo-h1 {
+    margin-left: -7px;
+    margin-bottom: 7px;
+}
+
+footer {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    padding: 5vw 10vw;
+}
+
+#logo-footer {
+    width: 200px;
+}
+
+#soc-med {
+    width: 16vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.logo-soc-med {
+    width: 30px;
+    height: 30px;
+}
+
+#logo-footer-small {
+    width: 60px;
+}
+
+h4 {
+    text-align: center;
+}
+
+.form-control, .form-select {
+    color: white;
+    background-color: rgb(26, 26, 26);
+    border: None;
+}

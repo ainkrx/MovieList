@@ -1,0 +1,38 @@
+.content {
+  padding: 5% 13%;
+  background-color: black;
+  color: white;
+}
+
+.row {
+  margin: 5px 0px;
+}
+
+.text {
+  color: red;
+}
+
+.card {
+  background-color: rgb(26, 26, 26);
+}
+
+.col a {
+  color: white;
+  text-decoration: none;
+}
+
+.card img {
+  padding: 10px;
+  height: 20vw;
+  object-fit: cover;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.page-link {
+  background-color: rgb(26, 26, 26);
+  border: none;
+  color: white;
+}

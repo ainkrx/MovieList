@@ -1,0 +1,71 @@
+.content {
+    padding: 5% 13%;
+    background-color: black;
+    color: white;
+}
+
+.row {
+    margin: 5px 0px;
+}
+
+.img-row {
+    padding: 10px;
+    height: 20vw;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.page-link {
+    background-color: rgb(26, 26, 26);
+    border: none;
+    color: white;
+}
+
+.modal-content, .modal-header, .modal-body, .modal-footer {
+    background-color: rgb(26, 26, 26);
+    border: none;
+}
+
+.modal form {
+    padding: 10px;
+}
+
+.edit_status {
+    border: none;
+    background-color: transparent;
+}
+
+.edit_status:hover {
+    background-color: red;
+}
+
+.c_btn {
+    margin: 15px 0px;
+    border: none;
+    background-color: red;
+}
+
+.row .col-3 {
+    margin-top: 5px;
+    margin-left: -10px;
+}
+
+.col-3 label {
+    border: none;
+    background-color: transparent;
+    color: white;
+}

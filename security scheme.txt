@@ -1,0 +1,7 @@
+Admin pages | if auth check false or auth user not admin
+
+User pages | if auth check false or auth user not member
+
+Admin+User pages | if auth check false
+
+Guest pages | if auth check true

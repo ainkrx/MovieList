@@ -1,0 +1,72 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    /* mo taro font ga? montserrat cakeup ueue */
+}
+
+#carousel-outer {
+    position: relative;
+}
+
+.carousel-inner {
+    height: 90%;
+}
+
+.carousel-item {
+    height: 90%;
+}
+
+.carousel-item > img {
+    height: 100vh;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.gradient-block {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 30%, rgba(255, 0, 0, 0));
+}
+
+.carousel-caption {
+    z-index: 100;
+    width: 40vw;
+}
+
+.card-img-top {
+    object-fit: cover
+}
+
+.card {
+    padding: 0;
+    background-color: black;
+}
+
+.genre {
+    background-color: rgb(66, 66, 66);
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+}
+
+.sort {
+    background-color: rgb(66, 66, 66);
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+}
+
+.movie-link {
+    text-decoration: none;
+    color: white;
+}
+
+.movie-link:hover {
+    color: gray;
+}
