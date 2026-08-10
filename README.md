@@ -1,64 +1,89 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 🎬 MovieList
+A full-stack web application for browsing movies and actors, and maintaining a personal movie watchlist. Built with **Laravel** (PHP), Blade, and a relational database.  
+🔗 **Live Demo:** https://www.com   
+Developed on **Render** and the database runs on **Neon** (PostgreSQL).
+## Background
+This project was developed as a group assignment for a university web-programming course. The application follows Laravel's MVC pattern and focuses on practical full-stack concepts: relational data modelling, server-rendered pages, authentication, authorization, and CRUD operations.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This was built from a hands-on assignment blueprint, so the objective was implementing the features and UI as the assignment required. This deploy did not touch the original code at all, what's running here is exactly the project as it was back then.
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
+The project was originally built with MySQL, but for deployment purposes it was containerized with Docker as well, so it's also easier for other people to run.
+## Deployment Notes
+Movie and actor image uploads are saved inside the current container, which will be displayed while that container is running, but disappear after Render sleeps, restarts, or redeploys the service. Neon stores the database records and image paths only and does not store the uploaded image files. That's why the live-demo database is intentionally reset to its seeded state whenever the service starts.
 ## License
+Learning purposes. All images belong to their respective owners.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Project Overview
+## Backend (Laravel / PHP)
+- MVC structure with Eloquent models: `Movie`, `Actor`, `Genre`, and `User`
+- Relational data modelling for movies, actors, genres, and watchlists
+- Movie discovery through title search, genre filtering, sorting, a random-movie carousel, and a watchlist-count-ranked section
+- Similar-movie recommendations based on shared genres
+- Session-based registration, login, logout, and remember-me authentication
+- Role-based middleware for `guests`, `signed-in users`, `members`, and `administrators`
+- Database migrations and seeders for users, movies, actors, genres, watchlists, and relationship pivot tables
+## Frontend (Blade)
+- Home page with carousel, popular section, search, genre filters, and catalogue sorting
+- Movie and actor listings with title search and pagination
+- Movie details with cast character names, genres, director, release year, and similar-movie recommendations
+- Actor details with biography, popularity, and filmography
+- Login, registration, logout, profile-detail editing, profile-image-URL editing, and personal watchlist pages
+- Administrator pages to create, edit, and remove movies and actors, including local image-file uploads
+## Structure
+```text
+MovieList/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/     # Home, movie, actor, genre, and user controllers
+│   │   └── Middleware/      # Role and authentication middleware
+│   └── Models/              # Movie, Actor, Genre, and User models
+├── database/
+│   ├── migrations/          # Database schema
+│   └── seeders/             # Demo users, catalogue data, and pivot data
+├── public/                  # Web entry point, CSS, images, and static assets
+├── resources/
+│   └── views/               # Blade templates
+├── routes/
+│   ├── web.php              # Browser routes
+│   └── api.php              # Sanctum-protected current-user endpoint
+├── .env.example             # Environment-variable template
+├── composer.json            # PHP dependencies
+└── package.json             # Frontend build dependencies
+```
+
+# 🚀 Quick Start Guide
+## Step 1: Set Up Environment Variables
+Copy `.env.example` to `.env`, then fill in the values.
+## Step 2: Generate an APP_KEY
+```bash
+php -r "echo 'base64:' . base64_encode(random_bytes(32)) . PHP_EOL;"
+```
+Paste the output into `APP_KEY` in `.env`.
+## Step 3: Build and Run
+```bash
+docker compose up --build
+```
+## Step 4: Set Up the Database
+```bash
+docker compose exec server php artisan migrate --seed
+```
+
+# 🎮 Test the App
+## Guest Preview
+Visit `/` to browse the home feed, or `/movies` and `/actors` to explore the catalogue. Signing in is required to create a watchlist; administrator pages are restricted.
+## Demo Accounts
+The demo accounts are seeded automatically with `php artisan migrate --seed`:  
+1. **Administrator** 
+  - **Email**: `admin@admin.com`
+  - **Password**: `adminadmin`
+2. **Member**  
+  - **Email**: `dummy@user.com`
+  - **Password**: `dummyuser`
+## Try These Actions
+1. **Explore the home feed**: Search by title, filter by genre, or sort the catalogue by latest / A–Z / Z–A.
+2. **Browse movies**: Open `/movies`, search the catalogue, then select a movie to view its cast, genres, director, and similar recommendations.
+3. **Browse actors**: Open `/actors`, then select an actor to view their biography and filmography.
+4. **Register or sign in**: Create an account or use a demo account.
+5. **Manage a watchlist**: Feature only for member, add a movie, then mark it as Planning, Watching, or Finished, or remove it from `/watchlists`.
+6. **Edit a profile**: Update profile details or the profile image URL from `/profile/edit`.
+7. **Administrator tools**: Sign in as the administrator to add, edit, or remove movies and actors.
