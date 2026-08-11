@@ -1,7 +1,7 @@
 # 🎬 MovieList
 A full-stack web application for browsing movies and actors, and maintaining a personal movie watchlist. Built with **Laravel** (PHP), Blade, and a relational database.  
-🔗 **Live Demo:** https://www.com   
-Developed on **Render** and the database runs on **Neon** (PostgreSQL).
+🔗 **Live Demo:** https://movie-list-i.vercel.app  
+Developed on **Vercel** and the database runs on **Neon** (PostgreSQL).
 ## Background
 This project was developed as a group assignment for a university web-programming course. The application follows Laravel's MVC pattern and focuses on practical full-stack concepts: relational data modelling, server-rendered pages, authentication, authorization, and CRUD operations.
 
